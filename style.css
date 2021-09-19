@@ -1,0 +1,108 @@
+:root{
+	--green: #40AA54;
+	--gray:  #AFA8A8;
+}
+
+*{
+	margin:  0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+p{
+	font-size: 16px;
+}
+img{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+button{
+	cursor: pointer;
+	border-radius: 10px!important;
+	transition: 0.2s!important;
+}
+nav{
+	background: var(--green);
+	font-size: 16px;
+}
+nav span{
+	font-size: 46px;
+	display: inline-block;
+}
+.logo{
+	width: 80px;
+	height: 80px;
+	padding: 10px;	
+	border-radius: 50%;
+	cursor: pointer;
+}
+#login{
+	height: 100vh;
+	position: relative;
+}
+#login h2{
+	background-image: linear-gradient(to right, #49FFAB, rgba(255,255,255));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 56px;
+	font-weight: 600;
+	margin-bottom: 100px;
+	z-index: 2;
+}
+.mask{
+	background-image: linear-gradient(to top, rgba(62, 150, 91, 0.8), rgba(0,0,0,0.2)), url(./imgs/vegetable.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+}
+section#login::before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	background: rgba(0, 0, 0, 0.2);
+}
+.buttons{
+	width: 400px;
+	z-index: 2;
+	font-weight: 500;
+}
+.login{
+	background: var(--green);
+}
+.login:hover,
+.register:hover{
+	transform: scale(1.1);
+}
+.boarding-text p{
+	color: var(--gray);
+	font-size: 14px;
+}
+.boarding-progress i{
+	background: var(--green);
+	border-radius: 50%;
+	padding: 15px;
+	font-size: 20px;
+	color: white;
+	cursor: pointer;
+}
+.onboarding .image{
+	width: 100%;
+	height: 380px;
+}
+
+@media (max-width: 768px){
+	.onboarding .image{
+		height: 300px;
+	}
+	#login h2{
+		font-size: 48px;
+		line-height: 1.6;
+	}
+}
